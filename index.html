@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+
+	<script type="text/javascript" src="script.js"></script>
+
+    <link rel="icon" href="Favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>Test</title>
+</head>
+<body>
+<style>
+
+#my-form__img_gif{
+ position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 60px;
+    height: 60px;
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+    <div class="container">
+    <a class="navbar-brand" href="#">Test</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" id="nav-email" onClick="option_click(this.id)" style="cursor:pointer;"> Register using email</a>
+            </li>
+	
+            <li class="nav-item">
+                <a class="nav-link" id="nav-phone" onClick="option_click(this.id)" style="cursor:pointer;">Register using phone number</a>
+            </li>
+        </ul>
+
+    </div>
+    </div>
+</nav>
+
+<main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Register</div>
+                        <div class="card-body">
+                            <form name="my-form" onsubmit="return register()">
+
+                                <div class="form-group row">
+                                    <label for="my-form__email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="my-form__email_address"  class="form-control" name="email-address">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="my-form__phone_number" class="col-md-4 col-form-label text-md-right">Phone Number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="my-form__phone_number" class="form-control">
+                                    </div>
+                                </div>
+								<div class="form-group row">
+                                    <label for="my-form__currency" class="col-md-4 col-form-label text-md-right">Currency:</label>
+                                    <div class="col-md-6">
+								
+										<input type="radio"  id="my-form__currencyChoice1" name="my-form__currency" value="Euro">
+										<label for="contactChoice1">Euro</label>
+										<br>
+										<input type="radio"  id="my-form__currencyChoice2"  name="my-form__currency" value="USdollar">
+										<label for="contactChoice2">US dollar</label>
+										<br>
+										<input type="radio"  id="my-form__currencyChoice3"  name="my-form__currency" value="Pounds">
+										<label for="contactChoice3">British Pounds</label>
+										
+                                    </div>
+                                </div>
+								   <div class="form-group row">
+                                    <label for="my-form__terms_of_use" class="col-md-4 col-form-label text-md-right">Do you agree to terms of use?</label>
+                                    <div class="col-md-6">
+                                        <input type="checkbox" id="my-form__terms_of_use" class="form-control">
+                                    </div>
+                                </div>
+								   <div class="form-group row">
+                                    <label for="my-form__promo_notifications" class="col-md-4 col-form-label text-md-right">Do you agree to receive promo notifications?</label>
+                                    <div class="col-md-6">
+                                        <input type="checkbox" id="my-form__promo_notifications" class="form-control">
+                                    </div>
+                                </div>
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                        Submit
+                                        </button>
+                                    </div>
+									  <div id="my-form__loadingGif" style="display:none;"><img id="my-form__img_gif" src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg"></div>
+
+									<div class="col-md-6 offset-md-4">
+                                       <div id="my-form__error">
+									   
+									   </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
